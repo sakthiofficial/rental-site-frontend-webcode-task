@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Item } from "./Item";
-import { API } from './port';
+import { Item } from "../Item";
+import { API } from '../port';
 
 
 export function ListItem() {

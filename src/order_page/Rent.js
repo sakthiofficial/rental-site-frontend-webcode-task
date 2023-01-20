@@ -2,7 +2,7 @@ import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { API } from './port';
+import { API } from '../port';
 
 export function Rent() {
     const navigate = useNavigate()

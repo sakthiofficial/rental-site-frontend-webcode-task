@@ -1,0 +1,20 @@
+@use "../utilities/colors.scss" as clr;
+
+.login_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        input {
+            width: 20rem;
+            height: 0.8rem;
+
+        }
+    }
+}

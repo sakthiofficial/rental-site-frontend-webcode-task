@@ -1,5 +1,5 @@
 import { allproducts } from "./data";
-import { Product } from "./Product";
+import { Product } from "./product_pages/Product";
 
 export function Home() {
     return (

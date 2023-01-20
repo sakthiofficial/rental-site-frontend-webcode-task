@@ -1,0 +1,15 @@
+.login_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.login_page form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.login_page form input {
+  width: 20rem;
+  height: 0.8rem;
+}/*# sourceMappingURL=login_page.css.map */

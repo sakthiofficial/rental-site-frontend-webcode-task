@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Item } from './Item';
-import { API } from './port';
+import { Item } from '../Item';
+import { API } from '../port';
 
 export function Cameras() {
     const [cameras, setcameras] = useState([]);

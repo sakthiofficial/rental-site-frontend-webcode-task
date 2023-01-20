@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { API } from './port';
+import { API } from '../port';
 
 export function Rental() {
     const [data, setdata] = useState([])

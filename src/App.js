@@ -5,27 +5,35 @@ import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import Button from '@mui/material/Button';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { Home } from './Home';
-import { ListItem } from './ListItem';
-import { Contact } from './Contact';
-import { Rent } from './Rent';
-import { useState } from 'react';
+import { ListItem } from './product_pages/ListItem';
+import { Contact } from './user_info/Contact';
+import { Rent } from './order_page/Rent';
+import { Children, useState } from 'react';
 import { About } from './About';
-import { CartItems } from './CartItems';
-import { Rental } from './Rental';
-import { Cameras } from './Cameras';
-import { Gagets } from './Gagets';
-
-
+import { CartItems } from './order_page/CartItems';
+import { Rental } from './order_page/Rental';
+import { Cameras } from './product_pages/Cameras';
+import { Gagets } from './product_pages/Gagets';
+import { Producted } from './product_pages/Producted';
+import { Login } from './user_info/Login';
+import { Signup } from './user_info/signup';
 
 function App() {
   let [cart, setcart] = useState(false)
+  const [logIn, setlogIn] = useState(false)
+  // if (localStorage.getItem("token")) {
+  //   setlogIn(true)
+  // } else {
+  //   setlogIn(false)
+  // }
   return (
     <div className="App" >
+
       <BrowserRouter>
         <div className="nav-bar">
           <div className="nav-bar_stage1">
             <div className="nav-bar_stage1_logo">
-              <img src="https://cdn-icons-png.flaticon.com/512/401/401981.png?w=740&t=st=1674129627~exp=1674130227~hmac=6f99bda78a7701a3e8dd188c354962af970bd9dbdef303f2330bb42bec5d9963" alt="" />
+              <img src="https://amazepxm.com/amaze-demo/images/logo_1.png" alt="" />
             </div>
             <div className="nav-bar_stage1_searchbar">
               <input type="text" />
@@ -38,8 +46,8 @@ function App() {
               <Link to="/">offers</Link>
               <Link to="/about">about</Link>
               <Link to="/contact">contact us</Link>
-              <Link to="/">sign up</Link>
-              <Link className="login" to="/">log in</Link>
+              <ProductSignIN logIn={logIn} setlogIn={setlogIn}>  <Link to="/signup">sign up</Link>
+                <Link className="login" to="/login">log in</Link></ProductSignIN>
 
 
             </div>
@@ -48,7 +56,6 @@ function App() {
 
 
               <Link to="/rental">rented</Link>
-              <p className="no-cart">1</p>
               <button onClick={() => setcart(!cart)}><ShoppingCartOutlinedIcon /></button>
 
             </div>
@@ -62,13 +69,21 @@ function App() {
         </div> : null}
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/items' element={<ListItem />} />
+          <Route path='/items' element={
+            <Producted logIn={logIn}>
+              <ListItem />
+            </Producted>}
+          />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/rent/:product/:id' element={<Rent />} />
+          <Route path='/rent/:product/:id' element={<Producted logIn={logIn}><Rent /></Producted>} />
           <Route path='/about' element={<About />} />
-          <Route path='/rental' element={<Rental />} />
+          <Route path='/rental' element={<Producted logIn={logIn}><Rental /></Producted>} />
           {/* <Route path='/cameras' element={<Cameras />} /> */}
-          <Route path='/:item' element={<Gagets />} />
+          <Route path='/:item' element={<Producted logIn={logIn}><Gagets /></Producted>} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+
+
 
 
 
@@ -81,6 +96,13 @@ function App() {
       </BrowserRouter>
     </div>
   );
+}
+function ProductSignIN({ children, logIn, setlogIn }) {
+  if (logIn) {
+    return null
+  } else {
+    return children
+  }
 }
 export default App;
 

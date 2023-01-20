@@ -7,6 +7,7 @@
 @import url("./pages/contact_page.scss");
 @import url("./pages/rent_page.scss");
 @import url("./pages/rental_page.scss");
+@import url("./pages/login_page.scss");
 .App {
   margin: 0rem 0.5rem;
 }/*# sourceMappingURL=main.css.map */

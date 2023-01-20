@@ -1,9 +1,9 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { About } from './About';
-import { Item } from './Item';
-import { API } from './port';
+import { About } from '../About';
+import { Item } from '../Item';
+import { API } from '../port';
 
 export function Gagets() {
 
