@@ -1,0 +1,29 @@
+.rental_page {
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 4px black;
+  margin: 2rem 1rem;
+}
+.rental_page_info {
+  display: flex;
+  align-items: center;
+}
+.rental_page_info_img {
+  max-width: 25rem;
+  height: 15rem;
+}
+.rental_page_info_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.rental_page_info_text p {
+  font-weight: 600;
+  font-size: 18px;
+}
+.rental_page_details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem;
+}/*# sourceMappingURL=rental_page.css.map */

@@ -1,0 +1,49 @@
+.products_page_banner img {
+  width: 100%;
+  padding: 0.1rem 0rem;
+  height: 40rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.products_page_text {
+  display: flex;
+  justify-content: center;
+}
+.products_page_text-topic p {
+  text-align: center;
+}
+.products_page_text-topic h2 {
+  font-family: "Dosis", sans-serif;
+  color: #b1afb2;
+}
+.products_page_products {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.products_page_products .product {
+  margin: 1rem 2rem;
+}
+.products_page_products .product_img {
+  width: 20rem;
+}
+.products_page_products .product_img img {
+  width: 100%;
+  opacity: 0.6;
+}
+.products_page_products .product_img img:hover {
+  opacity: 1;
+}
+.products_page_products .product_text {
+  text-align: center;
+}
+.products_page_products .product_text p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.products_page footer {
+  height: 5rem;
+  width: 100%;
+  background-color: #b1afb2;
+}/*# sourceMappingURL=home.css.map */

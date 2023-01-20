@@ -1,0 +1,19 @@
+.contact_page {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.contact_page form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.contact_page form input {
+  width: 20rem;
+  padding: 0.5rem 1rem;
+}
+.contact_page form button {
+  width: 10rem;
+}/*# sourceMappingURL=contact_page.css.map */

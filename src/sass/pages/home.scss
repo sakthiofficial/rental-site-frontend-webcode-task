@@ -1,0 +1,73 @@
+@use "../utilities/colors.scss" as clr;
+
+.products_page {
+    &_banner {
+        img {
+            width: 100%;
+            padding: 0.1rem 0rem;
+            height: 40rem;
+            object-fit: cover;
+        }
+    }
+
+    &_text {
+        display: flex;
+        justify-content: center;
+
+        &-topic {
+            p {
+                text-align: center;
+            }
+
+            h2 {
+                font-family: 'Dosis', sans-serif;
+                color: clr.$theme-text
+            }
+        }
+    }
+
+    &_products {
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .product {
+            margin: 1rem 2rem;
+
+            &_img {
+                width: 20rem;
+                // background-color: #9b895f !important;
+
+
+                img {
+                    width: 100%;
+                    opacity: 0.6;
+
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &_text {
+                text-align: center;
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+
+                }
+
+            }
+        }
+    }
+
+    footer {
+        height: 5rem;
+        width: 100%;
+        background-color: clr.$theme-text;
+    }
+
+}

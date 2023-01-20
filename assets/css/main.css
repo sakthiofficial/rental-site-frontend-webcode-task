@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
+@import url("./pages/home.scss");
+@import url("./global/reset.scss");
+@import url("./pages/nav-bar.scss");
+@import url("./pages/products.scss");
+@import url("./pages/contact_page.scss");
+@import url("./pages/rent_page.scss");
+@import url("./pages/rental_page.scss");
+.App {
+  margin: 0rem 0.5rem;
+}/*# sourceMappingURL=main.css.map */

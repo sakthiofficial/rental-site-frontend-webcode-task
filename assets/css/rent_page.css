@@ -1,0 +1,32 @@
+.rent_page_info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.rent_page_info_img {
+  max-width: 30rem;
+}
+.rent_page_info_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rent_page_detail {
+  margin: 2rem 1rem;
+  text-align: center;
+}
+.rent_page_detail input {
+  width: 15rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 0px 1rem;
+}
+.rent_page_detail button {
+  background-color: #ffc623;
+  color: #000000;
+  height: 2rem;
+  margin: 0px 2rem;
+}/*# sourceMappingURL=rent_page.css.map */

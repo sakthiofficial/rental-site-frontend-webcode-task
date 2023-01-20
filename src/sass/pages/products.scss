@@ -1,0 +1,54 @@
+@use "../utilities/colors.scss" as clr;
+
+.list_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+
+    .item_container {
+        max-width: 20rem;
+        text-align: center;
+        box-shadow: 1px 1px 1px clr.$theme-text;
+        border-radius: 5px;
+
+        &_img {
+            background-color: clr.$item-color;
+            margin: 1rem 0px;
+            width: 20rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_text {
+
+
+            h2 {
+                font-family: 'Dosis', sans-serif;
+            }
+
+            p {
+                font-size: 17px;
+                font-weight: 400;
+            }
+        }
+
+        &_buttons {
+            margin: 1rem 0px;
+
+            button {
+                margin-right: 1rem !important;
+                background-color: clr.$theme-color !important;
+
+            }
+
+            .cart-btn {
+                background-color: clr.$theme-text !important;
+                color: black;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.nav-bar {
+  background-color: #ffc623;
+}
+.nav-bar_stage1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar_stage1_logo {
+  width: 5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0px 3rem;
+}
+.nav-bar_stage1_logo img {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.nav-bar_stage1_searchbar {
+  margin: 1.3rem 3rem;
+}
+.nav-bar_stage1_searchbar input {
+  width: 24rem;
+  position: relative;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  padding: 0px 1.4rem;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+.nav-bar_stage1_searchbar button {
+  position: absolute;
+  top: 2rem;
+  right: 2.3rem;
+  color: #000000;
+  outline: none;
+  font-size: 10px;
+}
+.nav-bar_stage2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar_stage2_route1 {
+  padding: 0.6rem 8rem;
+}
+.nav-bar_stage2_route1 a {
+  text-decoration: none;
+  color: #000000;
+  margin-left: 3rem;
+  transition: 500ms;
+}
+.nav-bar_stage2_route1 a:hover {
+  transition: 500ms;
+  font-size: 18px;
+}
+.nav-bar_stage2_route1 .login {
+  background-color: #000000;
+  color: #ffc623;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 500ms;
+}
+.nav-bar_stage2_route1 .login:hover {
+  background-color: #ffc623;
+  border: 2px solid #000000;
+  transition: 500ms;
+  color: #000000;
+  font-size: 16px;
+}
+.nav-bar_stage2_route2 {
+  padding: 0rem 4rem;
+}
+.nav-bar_stage2_route2 .no-cart {
+  position: absolute;
+  top: 6rem;
+  left: 71.5rem;
+  font-size: 12px;
+}
+.nav-bar_stage2_route2 button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #b1afb2;
+  padding: 0px 2rem;
+  cursor: pointer;
+}
+.nav-bar_stage2_route2 a {
+  text-decoration: none;
+  color: #b1afb2;
+  margin-left: 3rem;
+  font-weight: 600;
+  transition: 500ms;
+}
+.nav-bar_stage2_route2 a:hover {
+  transition: 500ms;
+  font-size: 18px;
+}
+
+.cart {
+  position: absolute;
+  left: 47rem;
+  width: 28rem;
+  height: 25rem;
+  overflow-y: scroll;
+  background-color: #f5f5f5;
+  padding: 1rem 1rem;
+  z-index: 20;
+}
+.cart_items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.btn {
+  text-align: center;
+  margin: 2rem 0px;
+}/*# sourceMappingURL=nav-bar.css.map */

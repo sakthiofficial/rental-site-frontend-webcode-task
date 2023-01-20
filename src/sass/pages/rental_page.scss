@@ -1,0 +1,39 @@
+@use "../utilities/colors.scss" as clr;
+
+.rental_page {
+    background-color: clr.$box-color;
+    box-shadow: 2px 2px 4px black;
+    margin: 2rem 1rem;
+
+    &_info {
+        display: flex;
+
+        align-items: center;
+
+        &_img {
+            max-width: 25rem;
+            height: 15rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        &_text {
+            p {
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    &_details {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+}

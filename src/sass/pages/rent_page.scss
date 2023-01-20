@@ -1,0 +1,40 @@
+@use "../utilities/colors.scss" as clr;
+
+.rent_page {
+    &_info {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &_img {
+            max-width: 30rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &_detail {
+        margin: 2rem 1rem;
+        text-align: center;
+
+        input {
+            width: 15rem;
+            height: 2rem;
+            outline: none;
+            border: none;
+            border: 1px solid clr.$text-color;
+            border-radius: 5px;
+            padding: 0px 1rem;
+        }
+
+        button {
+            background-color: clr.$theme_color;
+            color: clr.$text-color;
+            height: 2rem;
+            margin: 0px 2rem;
+        }
+    }
+}
