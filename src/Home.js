@@ -1,7 +1,17 @@
+import { useContext } from "react";
+import { user } from "./App";
 import { allproducts } from "./data";
 import { Product } from "./product_pages/Product";
 
 export function Home() {
+    const [logIn, setlogIn] = useContext(user)
+    if (localStorage.getItem("token")) {
+        setlogIn(true)
+    } else {
+        setlogIn(false)
+
+    }
+
     return (
         <div className="products_page">
             <div className="products_page_banner">

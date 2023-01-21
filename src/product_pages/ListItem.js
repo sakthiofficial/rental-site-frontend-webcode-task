@@ -20,8 +20,8 @@ export function ListItem() {
     }, [])
     return (
         <div className="list_items">
-            {cameras.map(val => <Item name={val.name} product={"cameras"} image={val.image} id={val._id} rent={val.rent} />)}
-            {gagets.map(val => <Item name={val.name} product={"gagets"} image={val.image} id={val._id} rent={val.rent} />)}
+            {cameras.map(val => <Item value={val} name={val.name} product={"cameras"} image={val.image} id={val._id} rent={val.rent} />)}
+            {gagets.map(val => <Item value={val} name={val.name} product={"gagets"} image={val.image} id={val._id} rent={val.rent} />)}
         </div>
     );
 }

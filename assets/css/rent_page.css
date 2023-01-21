@@ -13,16 +13,17 @@
 }
 .rent_page_detail {
   margin: 2rem 1rem;
-  text-align: center;
 }
-.rent_page_detail input {
-  width: 15rem;
-  height: 2rem;
-  outline: none;
-  border: none;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  padding: 0px 1rem;
+.rent_page_detail form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rent_page_detail form input {
+  width: 30rem;
+}
+.rent_page_detail .order-btn {
+  width: 9rem;
 }
 .rent_page_detail button {
   background-color: #ffc623;

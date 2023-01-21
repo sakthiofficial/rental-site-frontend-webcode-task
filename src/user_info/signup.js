@@ -38,6 +38,8 @@ export function Signup() {
                 if (dt.token) {
                     seterr(false);
                     localStorage.setItem("token", dt.token);
+                    localStorage.setItem("name", values.name);
+
                     navigate("/");
                 } else {
                 }

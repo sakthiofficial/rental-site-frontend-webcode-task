@@ -5,22 +5,17 @@ import { API } from '../port';
 
 export function Rental() {
     const [data, setdata] = useState([])
-    const { name, image } = {
-        name: "Digitek DSG 005 3-Axis Gimble",
-        specification: ["Multi-dimensional operations without a shake or jerk", "Multi-dimensional operations without a shake or jerk", "Smooth Cinematic Footage to capture moments"],
-        image: "https://media.croma.com/image/upload/v1672391381/Croma%20Assets/Imaging/Camera%20Accessories/Images/251477_0_ee0uf3.png",
-        price: 5999,
-        rent: 45
-    };
+    const name = localStorage.getItem("name")
+
     const getRents = async () => {
-        fetch(`${API}user/sakthi/rentals`).then(val => val.json()).then(dt => setdata(dt))
+        fetch(`${API}user/${name}/rentals`).then(val => val.json()).then(dt => setdata(dt))
     }
     useEffect(() => {
         getRents()
     }, [])
     function returnProduct(id) {
 
-        fetch(`${API}user/sakthi/return/${id}`, {
+        fetch(`${API}user/${name}/return/${id}`, {
             method: "DELETE"
         }).then(val => {
             if (val.status == 200) {
@@ -56,3 +51,5 @@ export function Rental() {
         </div>
     );
 }
+
+

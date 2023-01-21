@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { useFormik } from 'formik';
 import * as yup from "yup";
 import { API } from '../port';
+import { user } from '../App';
 
 export function Login() {
+    const [logIn, setlogIn] = useContext(user)
     const [err, seterr] = useState(false);
     const navigate = useNavigate();
     const yupValidation = yup.object({
@@ -28,7 +30,7 @@ export function Login() {
                 if (val.token) {
                     seterr(false);
                     localStorage.setItem("token", val.token)
-
+                    localStorage.setItem("name", values.name)
                     navigate("/");
 
                 } else {

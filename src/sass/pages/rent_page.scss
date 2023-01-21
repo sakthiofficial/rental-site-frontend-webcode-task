@@ -18,16 +18,22 @@
 
     &_detail {
         margin: 2rem 1rem;
-        text-align: center;
 
-        input {
-            width: 15rem;
-            height: 2rem;
-            outline: none;
-            border: none;
-            border: 1px solid clr.$text-color;
-            border-radius: 5px;
-            padding: 0px 1rem;
+        form {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                width: 30rem;
+            }
+        }
+
+        .order-btn {
+
+            width: 9rem;
+            
         }
 
         button {
