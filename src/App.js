@@ -34,11 +34,7 @@ function App() {
   // const [logIn, setlogIn] = useState(false)
   const [logIn, setlogIn] = useState(false)
   const [cartItem, setcartItem] = useState([])
-  // if (localStorage.getItem("token")) {
-  //   setlogIn(true)
-  // } else {
-  //   setlogIn(false)
-  // }
+
   return (
     <cartContext.Provider value={[cartItem, setcartItem]}>
       <user.Provider value={[logIn, setlogIn]}>
