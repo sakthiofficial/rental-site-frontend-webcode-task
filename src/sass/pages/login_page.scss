@@ -4,7 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+
+    position: absolute;
+    top: 10rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 
     form {
         display: flex;
@@ -15,6 +20,39 @@
             width: 20rem;
             height: 0.8rem;
 
+
+        }
+
+
+
+        .signup-btn {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+
+            .btn {
+                align-items: center;
+                margin: 0 0 0 auto;
+                text-transform: capitalize;
+                font-weight: 500;
+                color: clr.$theme-text;
+            }
+        }
+
+        .loading {
+            animation: spin 2s infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+
+            }
         }
     }
+
 }

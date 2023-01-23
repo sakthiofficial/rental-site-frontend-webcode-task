@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  position: absolute;
+  top: 10rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 .login_page form {
   display: flex;
@@ -12,4 +16,36 @@
 .login_page form input {
   width: 20rem;
   height: 0.8rem;
+}
+.login_page form .signup-btn {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.login_page form .signup-btn .btn {
+  align-items: center;
+  margin: 0 0 0 auto;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #b1afb2;
+}
+.login_page form .loading {
+  -webkit-animation: spin 2s infinite;
+          animation: spin 2s infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=login_page.css.map */

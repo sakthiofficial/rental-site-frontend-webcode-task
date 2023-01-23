@@ -28,7 +28,7 @@ export function Rental() {
 
     }
     return (
-        <div>
+        <div className='empty'>
             {data.length == 0 ? "No Rented Items" : data.map((val, index) => {
                 return (
                     <div key={index} className="rental_page">

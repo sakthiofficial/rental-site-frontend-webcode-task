@@ -1,6 +1,10 @@
 .contact_page {
   display: flex;
-  height: 100vh;
+  position: absolute;
+  top: 10rem;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   justify-content: center;
   align-items: center;
 }
@@ -12,8 +16,10 @@
 }
 .contact_page form input {
   width: 20rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 .contact_page form button {
+  font-weight: 520;
+  text-align: center;
   width: 10rem;
 }/*# sourceMappingURL=contact_page.css.map */

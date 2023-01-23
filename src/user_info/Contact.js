@@ -22,9 +22,9 @@ export function Contact() {
     return (
         <div className="contact_page">
             <form onSubmit={() => formik.handleSubmit}>
-                <TextField id="standard-basic" onChange={() => formik.handleChange} name="name" label="your name" variant="standard" />
-                <TextField id="standard-basic" onChange={() => formik.handleChange} name="email" label="your email" variant="standard" />
-                <TextField id="standard-basic" onChange={() => formik.handleChange} name="feedback" label="your feedback" variant="standard" />
+                <TextField id="standard-basic" variant="outlined" onChange={() => formik.handleChange} name="name" label="your name" />
+                <TextField id="standard-basic" onChange={() => formik.handleChange} name="email" label="your email" variant="outlined" />
+                <TextField id="standard-basic" onChange={() => formik.handleChange} name="feedback" label="your feedback" variant="outlined" />
                 <Button type="submit" onClick={() => greet()} variant="contained">SEND</Button>
             </form>
         </div>

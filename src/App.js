@@ -31,7 +31,6 @@ export const cartContext = createContext()
 
 function App() {
   let [cart, setcart] = useState(false)
-  // const [logIn, setlogIn] = useState(false)
   const [logIn, setlogIn] = useState(false)
   const [cartItem, setcartItem] = useState([])
 
@@ -45,7 +44,7 @@ function App() {
             <div className="nav-bar">
               <div className="nav-bar_stage1">
                 <div className="nav-bar_stage1_logo">
-                  <img src="https://amazepxm.com/amaze-demo/images/logo_1.png" alt="" />
+                  <img src="https://amazepxm.com/amaze-demo/images/logo_1.png" alt="" onClick={() => <Navigate to="/" />} />
                 </div>
                 <div className="nav-bar_stage1_searchbar">
                   <InputBox />

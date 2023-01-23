@@ -143,8 +143,9 @@
     overflow-y: scroll;
     background-color: clr.$box-color;
     padding: 1rem 1rem;
-
+    text-align: center;
     z-index: 20;
+    border-radius: 8px;
 
     &_items {
         display: flex;
