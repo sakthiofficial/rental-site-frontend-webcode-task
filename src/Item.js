@@ -12,6 +12,7 @@ export function Item({ id, name, image, rent, product, value }) {
     const [style, setstyle] = useState({})
     const btn = useRef()
     function Addcart(val) {
+        console.log(val);
         val.item = product
         setstyle({ color: "#ff791f" })
         setcartItem([...cartItem, val])

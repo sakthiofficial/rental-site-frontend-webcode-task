@@ -27,7 +27,7 @@ export function Gagets() {
         <>
 
             {item == "furnitures" || item == "systems" || item == "vechicals" ? <About /> : <div className="list_items">
-                {gagets.map((val, index) => <Item name={val.name} key={`gates${index}`} product={item} image={val.image} id={val._id} rent={val.rent} />)}
+                {gagets.map((val, index) => <Item name={val.name} value={val} key={`gates${index}`} product={item} image={val.image} id={val._id} rent={val.rent} />)}
             </div>}
 
         </>
