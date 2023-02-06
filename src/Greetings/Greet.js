@@ -1,6 +1,5 @@
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
-// import banner from ""
 export function Greet() {
     const navigate = useNavigate()
     return (
