@@ -1,0 +1,32 @@
+@use "../utilities/colors.scss" as clr;
+
+.greet {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // height: 100%;
+
+    &_img {
+        width: 50%;
+        height: 50%;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_btn {
+        button {
+            background-color: clr.$text-color !important;
+            color: clr.$theme-color;
+            height: 1.8rem !important;
+            font-weight: 500;
+            width: 5rem !important;
+
+            &:hover {}
+        }
+    }
+}

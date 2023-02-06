@@ -4,11 +4,14 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { API } from '../port';
 import MaterialUIPickers from '../product_pages/DatePicker';
 import calcDate from './calc';
+import Button from '@mui/material/Button';
+
 
 export function Rent() {
     const navigate = useNavigate()
     const [data, setdata] = useState({ specification: [] })
     const { id, product } = useParams()
+    const [rentalbtn, setrentalbtn] = useState(false)
     const name = localStorage.getItem("name")
 
     const date = new Date()
@@ -74,28 +77,35 @@ export function Rent() {
 
     return (
         <div className="rent_page">
-            <div className="rent_page_info">
-                <div className="rent_page_info_img">
-                    <img src={data.image} alt={data.name} />
+            <div className="rent">
+                <div className="rent_page_info">
+                    <div className="rent_page_info_img">
+                        <img src={data.image} alt={data.name} />
 
+                    </div>
+                    <div className="rent_page_info_spec">
+                        <h3>Specifications</h3>
+                        <ul>
+                            {data.specification.map(val => {
+                                return (
+                                    <li>{val}</li>
+                                );
+                            })}
+                        </ul>
+                        <div className="rent-btn">
+                            <Button onClick={() => setrentalbtn(true)}>Rent</Button>
+                        </div>
+
+
+                    </div>
                 </div>
-                <div className="rent_page_info_spec">
-                    <h3>Specifications</h3>
-                    <ul>
-                        {data.specification.map(val => {
-                            return (
-                                <li>{val}</li>
-                            );
-                        })}
-                    </ul>
-                </div>
-            </div>
-            <div className="rent_page_detail">
-                <form >
+                {rentalbtn ? <div className="rent_page_detail">
+                    <form >
 
-                    <MaterialUIPickers sendData={sendData} />
+                        <MaterialUIPickers sendData={sendData} />
 
-                </form>
+                    </form>
+                </div> : null}
             </div>
 
         </div>

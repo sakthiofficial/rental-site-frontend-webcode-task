@@ -1,18 +1,36 @@
+.rent_page {
+  display: flex;
+  justify-content: center;
+}
+.rent_page .rent {
+  width: 90%;
+  box-shadow: 1px 1px 6px #b1afb2;
+  margin: 2rem 0rem;
+}
+.rent_page .rent-btn {
+  margin: 1.5rem 0rem;
+}
+.rent_page .rent-btn button {
+  background-color: #ffc623;
+  color: #000000;
+  padding: 0.1rem 3rem;
+}
 .rent_page_info {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .rent_page_info_img {
-  max-width: 30rem;
+  max-width: 25rem;
 }
 .rent_page_info_img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.rent_page_detail {
-  margin: 2rem 1rem;
+.rent_page_info_spec ul li {
+  list-style-type: none;
+  margin: 1rem 1rem;
 }
 .rent_page_detail form {
   display: flex;
@@ -30,4 +48,16 @@
   color: #000000;
   height: 2rem;
   margin: 0px 2rem;
+}
+
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  background-color: white;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
 }/*# sourceMappingURL=rent_page.css.map */

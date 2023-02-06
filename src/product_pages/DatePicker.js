@@ -17,9 +17,11 @@ export default function MaterialUIPickers({ sendData }) {
     };
 
     return (
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <Stack spacing={3}>
-                {/* <DesktopDatePicker
+        <div className='date-picker' >
+            <div className='content'>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <Stack spacing={3}>
+                        {/* <DesktopDatePicker
                     label="Date desktop"
                     inputFormat="MM/DD/YYYY"
                     value={value}
@@ -33,16 +35,18 @@ export default function MaterialUIPickers({ sendData }) {
                     onChange={handleChange}
                     renderInput={(params) => <TextField {...params} />}
                 /> */}
-                <DateTimePicker
-                    label="Date&Time picker"
-                    value={value}
-                    onChange={handleChange}
-                    renderInput={(params) => <TextField {...params} />}
-                />
-                <div className="btn">
-                    <Button className='order-btn' onClick={() => sendData(value)}>Rent</Button>
-                </div>
-            </Stack>
-        </LocalizationProvider>
+                        <DateTimePicker
+                            label="Date&Time picker"
+                            value={value}
+                            onChange={handleChange}
+                            renderInput={(params) => <TextField {...params} />}
+                        />
+                        <div className="btn">
+                            <Button className='order-btn' onClick={() => sendData(value)}>ok</Button>
+                        </div>
+                    </Stack>
+                </LocalizationProvider>
+            </div>
+        </div>
     );
 }

@@ -77,10 +77,14 @@ function App() {
 
               </div>
             </div>
+            <div className='dummy'>
+
+            </div>
             {cart ? <div className="cart">
               <CartItems setlogIn={setlogIn} />
             </div> : null}
             <Routes>
+
               <Route path='/' element={<Home />} />
               <Route path='/items' element={
                 <Producted logIn={logIn}>

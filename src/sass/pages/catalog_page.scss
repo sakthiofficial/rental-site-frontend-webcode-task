@@ -1,0 +1,105 @@
+@use "../utilities/colors.scss" as clr;
+
+.catalog {
+    margin: 0px 3rem;
+
+    background-color: clr.$box-color;
+    border: 0.3px clr.$theme-text;
+
+    &_title {
+        padding: 6rem 0px;
+        font-family: 'Dosis', sans-serif;
+
+        background-image: linear-gradient(90deg, clr.$theme-color, clr.$text-color,
+
+                clr.$theme-text, );
+        text-transform: uppercase;
+        text-align: center;
+        color: transparent;
+        // font-size: 1.5rem;
+        -webkit-background-clip: text;
+
+        h2 {
+            font-weight: 600-10;
+            font-size: 1.3rem;
+
+        }
+
+    }
+
+    &_contant {
+        background-color: transparent;
+
+        &_list {
+            display: flex;
+            padding: 1rem 2rem;
+            justify-content: space-around;
+            align-items: center;
+            margin: 4rem 0px;
+
+            &_img {
+                width: 50%;
+                height: 18rem;
+                border-radius: 5px;
+                overflow: hidden;
+                background-color: transparent;
+                transition: 500ms;
+
+                &:hover {
+                    background-color: black;
+
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 2/1;
+                    transition: 500ms;
+                    opacity: 0.8;
+                    cursor: pointer;
+
+
+                    &:hover {
+                        transition: 500ms;
+                        opacity: 0.7;
+
+
+                    }
+                }
+
+            }
+
+            &_text {
+                padding: 3rem 2rem;
+                display: flex;
+                justify-content: center;
+                width: 50%;
+
+                p {
+                    line-height: 1.8rem;
+                    font-size: 1.1rem;
+                    text-indent: 2rem;
+                    letter-spacing: 2px;
+                    text-align: justify;
+                    color: clr.$theme-text;
+                    font-weight: 550;
+
+                    button {
+                        background-color: clr.$theme-color !important;
+                        font-size: 0.7rem !important;
+                        height: 1.2rem !important;
+                        color: clr.$text-color;
+                        text-transform: capitalize !important;
+                        font-weight: 535 !important;
+                        letter-spacing: 1px !important;
+                        margin: 0px 1rem;
+
+
+                    }
+                }
+            }
+        }
+    }
+
+}
