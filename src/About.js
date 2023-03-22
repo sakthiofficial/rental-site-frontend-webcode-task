@@ -11,8 +11,7 @@ export function About() {
 
         // </div>
         <div>
-            {/* <Catalog /> */}
-            <Stripe />
+            <Catalog />
         </div>
     );
 }
