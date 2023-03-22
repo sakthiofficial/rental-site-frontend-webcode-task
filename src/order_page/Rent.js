@@ -5,13 +5,15 @@ import { API } from '../port';
 import MaterialUIPickers from '../product_pages/DatePicker';
 import calcDate from './calc';
 import Button from '@mui/material/Button';
-
+import StripeCheckout from 'react-stripe-checkout';
+import { Stripe } from '../payments/stripe';
 
 export function Rent() {
-    const navigate = useNavigate()
     const [data, setdata] = useState({ specification: [] })
     const { id, product } = useParams()
     const [rentalbtn, setrentalbtn] = useState(false)
+
+
     const name = localStorage.getItem("name")
 
     const date = new Date()
@@ -26,53 +28,7 @@ export function Rent() {
 
     }, [])
 
-    function sendData(values = { $D: 0, $M: 0 }) {
 
-        // if (values.days < 1 || values.days > 20) {
-        //     alert("Please select minimum 1 day maximum 20 ")
-        //     return
-        // }
-
-
-        if (values.$y != date.getFullYear() || date.getMonth() > values.$M) {
-
-
-
-            alert("Please Check Year Date Month.  ")
-            console.log(date.getDate(), values.$D);
-        } else {
-            if (date.getMonth() == values.$M) {
-                if (values.$D < date.getDate()) {
-                    alert("Please Check Year Date Month.  ")
-                    console.log(date.getDate(), values.$D);
-
-                    return
-                }
-            }
-            console.log(calcDate(date.getDate(), date.getMonth(), values.$D, values.$M));
-            if (calcDate(date.getDate(), date.getMonth(), values.$D, values.$M) > 15) {
-                alert("Sorry We Provide WithIn 15 Days Of Rent")
-            } else {
-                const days = calcDate(date.getDate(), date.getMonth(), values.$D, values.$M)
-                const amount = days * 24 * data.rent
-                // console.log(amount);
-                fetch(`${API}user/rental/${name}`, {
-                    method: "POST",
-                    headers: { "Content-type": "application/json;charset=UTF-8" },
-                    body: JSON.stringify({ days: days, product_id: id, amount: amount, image: data.image, product_name: data.name })
-                }).then(val => {
-                    if (val.status == 200) {
-                        alert("SuccesFully Rented")
-                        navigate("/rental")
-                    }
-                })
-
-            }
-        }
-        // console.log(values, date);
-
-
-    }
 
 
     return (
@@ -98,14 +54,17 @@ export function Rent() {
 
 
                     </div>
+                    {/* <Stripe /> */}
+
                 </div>
                 {rentalbtn ? <div className="rent_page_detail">
-                    <form >
 
-                        <MaterialUIPickers sendData={sendData} />
 
-                    </form>
+                    <MaterialUIPickers data={data} id={id} name={name} />
+
+
                 </div> : null}
+
             </div>
 
         </div>

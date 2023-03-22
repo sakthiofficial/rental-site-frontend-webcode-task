@@ -61,7 +61,7 @@ export function Login() {
         <div className="login_page">
             <form onSubmit={handleSubmit}>
                 <TextField id="outlined-basic" onChange={handleChange} key={"name"} name="name" color={err ? "error" : errors.name ? "error" : "primary"} label={err ? "Incorrect username" : errors.name ? errors.name : "User Name"} variant="outlined" />
-                <TextField id="outlined-basic" onChange={handleChange} key={"password"} name="password" color={err ? "error" : errors.password ? "error" : "primary"} label={err ? "Incorrect Password" : errors.password ? errors.password : "Enter Password"} variant="outlined" />
+                <TextField id="outlined-basic" type="password" onChange={handleChange} key={"password"} name="password" color={err ? "error" : errors.password ? "error" : "primary"} label={err ? "Incorrect Password" : errors.password ? errors.password : "Enter Password"} variant="outlined" />
                 <div className="signup-btn" >
                     <Button onClick={() => navigate("/signup")} className='btn'>Sign Up</Button>
                     <Button variant='contained' color={err ? "error" : "primary"} type="submit">{err ? click ? <span><RefreshIcon className='loading' /></span> : "Try Again" : click ? <span><RefreshIcon className='loading' /></span> : "Log In"}</Button>

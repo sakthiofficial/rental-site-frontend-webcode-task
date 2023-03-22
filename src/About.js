@@ -1,5 +1,6 @@
 import Catalog from "./catalog/Catalog";
 import { Greet } from "./Greetings/Greet";
+import { Stripe } from "./payments/stripe";
 import MaterialUIPickers from "./product_pages/DatePicker";
 
 export function About() {
@@ -10,7 +11,8 @@ export function About() {
 
         // </div>
         <div>
-            <Catalog />
+            {/* <Catalog /> */}
+            <Stripe />
         </div>
     );
 }

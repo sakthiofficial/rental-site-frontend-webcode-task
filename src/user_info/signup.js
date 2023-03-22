@@ -60,7 +60,7 @@ export function Signup() {
             <form onSubmit={handleSubmit}>
                 <TextField id="outlined-basic" onChange={handleChange} key={"name"} name="name" label={err ? "This User Name Already Used" : errors.name ? errors.name : "User name"} variant="outlined" />
                 <TextField id="outlined-basic" onChange={handleChange} key={"email"} name="email" label={errors.email ? errors.email : "Email"} variant="outlined" />
-                <TextField id="outlined-basic" onChange={handleChange} key={"password"} name="password" label={errors.password ? errors.password : "Enter password"} variant="outlined" />
+                <TextField id="outlined-basic" onChange={handleChange} key={"password"} type="password" name="password" label={errors.password ? errors.password : "Enter password"} variant="outlined" />
                 <Button variant='contained' color={err ? "error" : "primary"} type="submit">{err ? click ? <span><RefreshIcon className='loading' /></span> : "Try Again" : click ? <span><RefreshIcon className='loading' /></span> : "Sign Up"}</Button>
             </form>
         </div>

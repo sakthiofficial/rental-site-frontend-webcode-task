@@ -151,7 +151,8 @@ function LogOut() {
     </div>
   )
 }
-function ProductSignIN({ children, logIn }) {
+function ProductSignIN({ children, logIn, setlogIn }) {
+
   if (logIn) {
     return null
   } else {
